@@ -1,0 +1,23 @@
+<p>
+  welcome works!
+</p>
+
+<div>
+<input type="text" #newitem /><br>
+
+ <select name="role" [(ngModel)]="role">{{role}}
+        <option *ngFor="let role of roles" [value]="role.value">  
+        {{role.display}}
+        </option>
+    </select>
+
+<button (click)="addItem(newitem.value, role)">Add</button>
+</div>
+
+<div>
+  <ul>
+    <li class="text" *ngFor="let item of items | async">
+      <p>Text: {{item.text}} // {{item.category}}</p>
+    </li>
+  </ul>
+</div>
