@@ -18,6 +18,9 @@
   <ul>
     <li class="text" *ngFor="let item of items | async">
       <p>Text: {{item.text}} // {{item.category}}</p>
+      <p>DESC: {{item.description}}</p>
+      <p>TITEL: {{item.title}}</p>
+      <hr>
     </li>
   </ul>
 </div>
